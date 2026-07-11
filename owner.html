@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Owner | Red Flag Green Flag Game</title>
+  <meta name="description" content="Owner control screen for the Red Flag Green Flag game." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="owner">
+  <main class="shell">
+    <header class="header">
+      <div>
+        <div class="eyebrow">♛ Owner control room</div>
+        <h1>Red Flag <span>Green Flag</span></h1>
+        <p class="subtitle">Start the game, show each statement, track participation, and reveal the final red versus green percentage.</p>
+      </div>
+      <nav class="nav-card">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link primary" href="participant.html">Participant link</a>
+      </nav>
+    </header>
+
+    <section class="grid">
+      <section class="panel">
+        <div class="panel-top">
+          <div>
+            <div class="label">Owner phase</div>
+            <h2>Control room</h2>
+          </div>
+          <div class="count-box">
+            <small>Participants now</small>
+            <strong id="participantCount">0</strong>
+          </div>
+        </div>
+
+        <div id="ownerWaiting" class="stage">
+          <div class="icon-tile play-tile">▶</div>
+          <h3>Ready to begin?</h3>
+          <p>Participants are currently seeing the waiting screen. Click start when everyone is ready.</p>
+          <button id="startBtn" class="primary-btn" type="button">Start the game →</button>
+        </div>
+
+        <div id="ownerPlaying" class="stage hidden"></div>
+        <div id="ownerResults" class="stage hidden"></div>
+      </section>
+
+      <aside class="side">
+        <div class="side-title">
+          <div class="side-icon">👥</div>
+          <div>
+            <h3>Session overview</h3>
+            <p style="margin:4px 0 0;color:#71717a;font-size:14px;">Owner-only dashboard</p>
+          </div>
+        </div>
+        <div class="info">
+          <div class="info-row"><span>Game status</span><span id="statusText">Waiting</span></div>
+          <div class="info-row"><span>Current round</span><span id="roundText">--</span></div>
+          <div class="info-row"><span>Participants</span><span id="sideParticipants">0</span></div>
+          <div class="info-row"><span>Total red flags</span><span id="totalRed">0</span></div>
+          <div class="info-row"><span>Total green flags</span><span id="totalGreen">0</span></div>
+        </div>
+        <div class="share-box">
+          <div class="label">Share this participant link</div>
+          <code id="participantLink">participant.html</code>
+        </div>
+        <div class="note">
+          This static version separates owner and participant pages. It syncs between tabs in the same browser using localStorage. For real participants on different devices, add a realtime backend.
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    document.getElementById("startBtn").addEventListener("click", startGame);
+    render();
+  </script>
+</body>
+</html>
