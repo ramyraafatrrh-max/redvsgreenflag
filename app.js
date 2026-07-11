@@ -11,10 +11,10 @@ import {
 import { firebaseConfig } from "./firebase-config.js";
 
 const statements = [
-  "A teammate consistently delivers great work, but rarely communicates progress until the deadline.",
-  "A customer asks for a shortcut that saves time but skips an important quality check.",
-  "A participant dominates the discussion and answers before others get a chance to speak.",
-  "A project is moving fast, but the team has not documented the key decisions yet."
+  "الشخص ده مبادر جداً، أول واحد يتطوع في أي أزمة أو مشكلة مستحيلة عشان ينقذ الموقف، بس عيبه إنه في نص السكة بيتوتر جداً، بيفقد ثقته في نفسه، وبيجيب ورا، ولازم حد تاني يتدخل يلحقه",
+  "الشخص ده مابيعرفش يوزن الأمور. لو حاولت تخدمه أو تكرمه، يرفض بشدة وبطريقة دفاعية ويقولك 'مستحيل أسمحلك تعمل كده'. ولما تقنعه بوجهة نظرك، يقلب 180 درجة ويطلب منك تعمل كل حاجة بزيادة وبمبالغة!",
+  "عنده ولاء عالي جداً لأصحابه، بس المشكلة إن دمه حامي وانفعالي لدرجة الغشومية. لو حد اتخانق مع صاحبه، ممكن يمد إيده",
+  "جدع ومستعد يقف معاك في أي زنقة بس وقت الجد يبيعك عادي جدا"
 ];
 
 const GAME_ID = "main-session";
